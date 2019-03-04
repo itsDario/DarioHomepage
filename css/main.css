@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* header css */
 
 .title,
@@ -62,6 +66,10 @@ body {
 .module p,
 .module h6 {
     margin: 1rem;
+}
+
+.module img {
+    border: 1px black solid;
 }
 
 /* If Grid is supported, remove the margin we set for the fallback */
