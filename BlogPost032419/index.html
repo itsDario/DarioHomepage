@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- reminder git push heroku master -->
+<!-- git push -->
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Dario</title>
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="secondary.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <a href="https://www.dariothe.dev">
+      <h2 class="title">DARIO OROPEZA</h2>
+    </a>
+  </header>
+
+  <div class="blog">
+    <br>
+    <h1 class="blogHeader">.max_by{|obj| block}</h1>
+    <br>
+    <p>The first one on my list is called max_by. This method can be called on an array of objects and then it would
+      sort the array in alphabetical or numerical order based on the object property of your choice. Then it returns the
+      highest value or last string of the sorted array.</p>
+
+    <p>Here is an example to illustrate what max_by does.</p>
+
+    <h3>[“Dario”, “Cantaloupe”, “Apple”].max_by{ |object| object.length}</h3>
+
+    <p>Here we pass an array of words and it max_by will return “Cantaloupe”
+      The array of three words was sorted by the length and we got back the longest word</p>
+
+    <p>If we ran the line of code with just the object without asking for the length like this</p>
+
+    <h3>[“Dario”, “Cantaloupe”, “Apple”].max_by{ |object| object}</h3>
+
+    <p>We would get back “Dario” since it has the last letter if the array was sorted alphabetically. But if we are just
+      sorting by string names or just numbers alone then we could use the method called max like this</p>
+
+    <h3>[“Dario”, “Cantaloupe”, “Apple”].max()</h3>
+
+    <p>And it would also return “Dario” since it works in the same way but without taking a block.</p>
+    <p> Other methods you can use to accomplish similar tasks are called</p>
+    <h3>min</h3>
+    <h3>min_by</h3>
+    <h3>sort</h3>
+    <h3>sort_by</h3>
+    <p>They work in almost the same ways and ideally you use the one that is the simplest for your work</p>
+    <p>Also you can find an example at</p>
+    <a
+      href="https://repl.it/@DarioO/ThankfulFaintMicroprogramming">https://repl.it/@DarioO/ThankfulFaintMicroprogramming</a>
+    </p>
+  </div>
+  <script src="js/jquery-3.js"></script>
+</body>
+
+</html>
