@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- reminder git push heroku master -->
+<!-- git push -->
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Dario</title>
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="secondary.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <a href="https://www.dariothe.dev">
+      <h2 class="title">DARIO OROPEZA</h2>
+    </a>
+  </header>
+
+  <div class="blog">
+    <br>
+    <h1 class="blogHeader">Css animations with keyframes</h1>
+    <h6>041119</h6>
+    <br>
+    <p>CSS animations are a simple and fun way to add a bit of life to your website. They are quick to implement and
+      today i'll be covering how to use keyframes to help you make any animation. There are two parts to an animations.
+      The
+      animation properties and the keyframes.</p>
+
+    <p>Examples:</p>
+    <a href="https://jsfiddle.net/itsDario/09z4ntow/29/">https://jsfiddle.net/itsDario/09z4ntow/29/</a>
+
+    <p>Here are a few animation properties you can use to put into your css</p>
+    <h3>animation-name: example;</h3>
+
+    <p>This sets how long your animation plays</p>
+    <h3>animation-duration: 4s;</h3>
+
+    <p>This sets how many times you play your animation. It can be set to Infinite</p>
+    <h3>animation-iteration-count: 5;</h3>
+
+    <p>This is how long you want the animation to wait before starting up
+      It also accepts negative numbers which makes the animation start midway through</p>
+    <h3>animation-delay: 2s;</h3>
+
+    <p>There are a few more animations properties you can learn about here</p>
+    <a href="https://www.w3schools.com/css/css3_animations.asp">https://www.w3schools.com/css/css3_animations.asp</a>
+
+
+    <p>With keyframes you enter three things. The percent into the animation you want the event to occur, the property
+      you
+      want changed and the value of the property</p>
+    <h3>@keyframes example {</h3>
+    <h3>0% {background-color:red;}</h3>
+    <h3>50% {background-color:blue;}</h3>
+    <h3>100% {background-color:red;}</h3>
+    <h3>}</h3>
+    <p>This animation will move the background back and forth between red and blue.
+      Feel free to play around the the settings in the jsFiddle! I wish you luck with your future CSS animations</p>
+
+  </div>
+  <script src="js/jquery-3.js"></script>
+</body>
+
+</html>
