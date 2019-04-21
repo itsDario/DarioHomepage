@@ -1,0 +1,40 @@
+/* body css */
+
+.blogList {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(5em, auto);
+    grid-gap: 1em;
+}
+
+div .post {
+    text-align: center;
+}
+
+/*
+.module p,
+.module h6,
+.module img,
+.module a {
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.module p,
+.module h6 {
+    margin: 1rem;
+}
+
+.module img {
+    border: 1px black solid;
+}
+
+/* If Grid is supported, remove the margin we set for the fallback */
+@supports (display: grid) {
+    .module {
+        margin: 0;
+    }
+}
