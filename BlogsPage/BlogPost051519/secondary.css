@@ -21,3 +21,9 @@ a{
     margin:auto;
     height: 100px;
 }
+
+#reactConf{
+    float: right;
+    margin:auto;
+    height: 200px;
+}
