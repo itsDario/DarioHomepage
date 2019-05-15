@@ -1,0 +1,23 @@
+p {
+    line-height: 1.8em;
+    font-size: 16px;
+}
+
+a{
+    display:block;
+}
+
+#bigCenteredImage{
+    display: block;
+    margin:auto;
+    text-align: center;
+    /* padding:200px; */
+    height: 300px;
+}
+
+
+#FaxJSLogo{
+    float: left;
+    margin:auto;
+    height: 100px;
+}
