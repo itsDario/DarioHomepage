@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- reminder git push heroku master -->
+<!-- git push -->
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Dario</title>
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="/BlogsPage/BlogPost081419/secondary.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <a href="https://www.dariothe.dev">
+      <h2 class="title">DARIO OROPEZA</h2>
+    </a>
+  </header>
+
+  <div class="blog">
+    <br>
+    <h1 class="blogHeader">How to use a hash for faster code</h1>
+    <h6>081419</h6>
+    <br>
+    <p>
+      Many code Challenges would have you manipulating arrays or other kinds of datasets in various ways. The easy
+      solution which would be using nested loops iteration through all the data multiple times is very inefficient and
+      would cause you to fail your code challenge even if the correct answer is found. A much faster solution is to keep
+      track of the data on your first iteration using a hash and then it's much faster to return the solution. In this
+      post i will not go into the specifics about algorithms ill just guide you through one specific code challenge and
+      show you how a hash can solve the problem
+    </p>
+    <p>
+      In this post I will use a recent code challenge i completed as an example and show you how it's much faster to
+      solve the problem. Here is the description of the code challenge i received.
+    </p>
+    <p>
+      Given an array that contains only numbers in the range from 1 to a.length, find the first duplicate number for
+      which the second occurrence has the minimal index. In other words, if there are more than 1 duplicated numbers,
+      return the number for which the second occurrence has a smaller index than the second occurrence of the other
+      number does. If there are no such elements, return -1.
+    </p>
+    <p>
+      My first solution was to just iterate through all the numbers using two loops and checking the index to find the
+      number that fits the requirements of the challenge. That failed the challenge because it was very slow. I was
+      looping through the whole array again for each number in the array. Which took a very long time for the computer
+      to finish compared to other solutions. I wont display that code since its not ideal.
+    </p>
+    <p>
+      The solution that I submitted which passed the code challenge used hash to record the data on my first passthrough
+      and i can return the answer without having to iterate through the data multiple times here is my submitted code
+      with comments
+    </p>
+    <code>
+      <p>function firstDuplicate(a) {</p>
+      <p> var nums = {} //Create Hash</p>
+      <p>var answer = -1 //Create answer with -1</p>
+      <p>a.some(n => { //iterate through the array</p>
+      <p>if(nums[n] === undefined){ //Make sure the value of the entry is not undefined</p>
+      <p>nums[n] = 0 //use 0 so we can count up</p>
+      <p>}</p>
+      <p>nums[n]++ //count each time the value repeats</p>
+      <br>
+      <p>if(nums[n] > 1 && answer &lt; 0){ //check if any of the items in the array have met the requirements return</p>
+      <p>answer=n //exit the array. Works when sing ‘some’ instead of ‘foreach’ } }) return answer //return the answer }
+      </p>
+    </code>
+    <p>
+      Here you can see Using Hashes you don't have to keep looping over the same dataset which will save a lot of
+      computer time, especially on larger arrays but more importantly will help you pass coding challenges.I wish you
+      luck in your future challenges.
+    </p>
+  </div>
+  <script src="js/jquery-3.js"></script>
+</body>
+
+</html>
