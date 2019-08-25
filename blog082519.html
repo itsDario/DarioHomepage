@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Dario</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Dario</a></h1>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="https://www.dariothe.dev/#banner">Top</a></li>
+					<li><a href="https://www.dariothe.dev/#one">Projects</a></li>
+					<li><a href="https://www.dariothe.dev/#blog">Blog Posts</a></li>
+					<li><a href="https://www.dariothe.dev/#footer">Contact</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>Recursion</h2>
+					<p>Adding up an array of numbers without a loop</p>
+				</div>
+			</header>
+
+			<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+
+					<section>
+						<p>One Challenge I’ve enjoyed recently was adding numbers in an array with recursion.
+							I was taking a Javascript recursion class and the instructor was teaching us a few ways to
+							use recursion. He gave us students a few recursion challenges and one that stood out to me
+							is doing addition in recursion while only passing one value into the method. After some
+							thought the solution I came up with was to remove the first value in the array and add it to
+							the next item then call the method again. It's really a simple solution. Here is the code in
+							javascript
+						</p>
+						<pre><code>var sumArray = function (arr) {
+	if (arr.length === 1) {
+		return arr[0]
+	} else {
+		var firstNum = arr.shift()
+		arr[0] += firstNum
+		return sumArray(arr)
+	}
+};</code></pre>
+						<p>It's a very simple solution though from what i read its not the most efficient since solving
+							the problem with a regular loop would be faster and less resource intensive but it's really
+							fun to solve some recoursion challenges and this is a really simple one to learn.</p>
+					</section>
+
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Footer -->
+		<section id="footer">
+			<div class="inner">
+				<h2 class="major">Get in touch</h2>
+				<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce
+					tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in
+					tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="4"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
+				<ul class="contact">
+					<li class="icon solid fa-envelope"><a href="mailto:contact@dariothe.dev">contact@dariothe.dev</a>
+					</li>
+					<li class="icon brands fa-github"><a href="https://github.com/itsDario">github.com/itsDario</a>
+					</li>
+					<li class="icon brands fa-linkedin"><a
+							href="https://www.linkedin.com/in/dariothedev/">linkedin.com/in/dariothedev/</a>
+					</li>
+				</ul>
+				<ul class="copyright">
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
