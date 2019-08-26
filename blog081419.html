@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Dario</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Dario</a></h1>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="./index.html#banner">Top</a></li>
+					<li><a href="./index.html#one">Projects</a></li>
+					<li><a href="./index.html#blog">Blog Posts</a></li>
+					<li><a href="./index.html#footer">Contact</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>Hashing</h2>
+					<p>How to use a hash for faster calculations</p>
+				</div>
+			</header>
+
+			<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+
+					<section>
+						<p>
+							Many code Challenges would have you manipulating arrays or other kinds of datasets in
+							various ways. The easy
+							solution which would be using nested loops iteration through all the data multiple times is
+							very inefficient and
+							would cause you to fail your code challenge even if the correct answer is found. A much
+							faster solution is to keep
+							track of the data on your first iteration using a hash and then it's much faster to return
+							the solution. In this
+							post i will not go into the specifics about algorithms ill just guide you through one
+							specific code challenge and
+							show you how a hash can solve the problem
+						</p>
+						<p>
+							In this post I will use a recent code challenge i completed as an example and show you how
+							it's much faster to
+							solve the problem. Here is the description of the code challenge i received.
+						</p>
+						<p>
+							Given an array that contains only numbers in the range from 1 to a.length, find the first
+							duplicate number for
+							which the second occurrence has the minimal index. In other words, if there are more than 1
+							duplicated numbers,
+							return the number for which the second occurrence has a smaller index than the second
+							occurrence of the other
+							number does. If there are no such elements, return -1.
+						</p>
+						<p>
+							My first solution was to just iterate through all the numbers using two loops and checking
+							the index to find the
+							number that fits the requirements of the challenge. That failed the challenge because it was
+							very slow. I was
+							looping through the whole array again for each number in the array. Which took a very long
+							time for the computer
+							to finish compared to other solutions. I wont display that code since its not ideal.
+						</p>
+						<p>
+							The solution that I submitted which passed the code challenge used hash to record the data
+							on my first passthrough
+							and i can return the answer without having to iterate through the data multiple times here
+							is my submitted code
+							with comments
+						</p>
+						<pre><code>function firstDuplicate(a) {
+
+	var nums = {} //Create Hash
+	var answer = -1 //Create answer with -1
+
+	a.some(n => { //iterate through the array
+		if(nums[n] === undefined){ //Make sure the value of the entry is not undefined
+			nums[n] = 0 //use 0 so we can count up
+		}
+
+		nums[n]++ //count each time the value repeats
+		if(nums[n] > 1 && answer &lt; 0){ //check if any of the items in the array have met the requirements 
+			return answer = n //exit the array. Works when using ‘some’ instead of ‘foreach’ 
+		} 
+	}) 
+	return answer //return the answer 
+}</code></pre>
+						<p>
+							Here you can see Using Hashes you don't have to keep looping over the same dataset which
+							will save a lot of
+							computer time, especially on larger arrays but more importantly will help you pass coding
+							challenges.I wish you
+							luck in your future challenges.
+						</p>
+					</section>
+
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Footer -->
+		<section id="footer">
+			<div class="inner">
+				<h2 class="major">Get in touch</h2>
+				<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce
+					tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in
+					tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="4"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
+				<ul class="contact">
+					<li class="icon solid fa-envelope"><a href="mailto:contact@dariothe.dev">contact@dariothe.dev</a>
+					</li>
+					<li class="icon brands fa-github"><a href="https://github.com/itsDario">github.com/itsDario</a>
+					</li>
+					<li class="icon brands fa-linkedin"><a
+							href="https://www.linkedin.com/in/dariothedev/">linkedin.com/in/dariothedev/</a>
+					</li>
+				</ul>
+				<ul class="copyright">
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
